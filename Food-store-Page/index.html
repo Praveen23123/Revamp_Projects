@@ -14,18 +14,36 @@
   <header>
     <div class="max-w-[100%] mx-auto banner-section h-screen">
       <div class="w-[100%] mx-auto bg-white p-3 fixed shadow-md">
-        <div class="w-[80%] mx-auto flex items-center justify-between">
-          <div>
+        <div class="w-[80%] mx-auto grid grid-cols-1 lg:grid-cols-2 items-center text-nowrap">
+          <div class="flex justify-between items-center">
             <img class="h-[70px] w-[70px]"
               src="https://ik.imagekit.io/praveen2312/revamp-projects/Food%20Store%20project/food-munch-img.png?updatedAt=1745922551165"
               alt="Logo" />
+            <div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-menu-icon lucide-menu lg:hidden" id="menu">
+                <path d="M4 12h16" />
+                <path d="M4 18h16" />
+                <path d="M4 6h16" />
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-x-icon lucide-x hidden lg:hidden" id="cross">
+                <path d="M18 6 6 18" />
+                <path d="m6 6 12 12" />
+              </svg>
+            </div>
           </div>
           <!-- Nav Bar -->
-          <div class="text-[#323F68] font-[roboto] font-normal text-[16px]">
-            <a class="p-2" href="">Why Choose Us?</a>
-            <a class="p-2" href="">Explore Menu</a>
-            <a class="p-2" href="">Delivery & Payment</a>
-            <a class="p-2" href="">Follow Us</a>
+          <div class="hidden lg:block " id="nav-list">
+            <div
+              class="text-[#323F68] font-[roboto] font-normal text-[16px] flex flex-col items-center lg:flex-row lg:justify-end gap-5 p-2">
+              <a href="">Why Choose Us?</a>
+              <a href="">Explore Menu</a>
+              <a href="">Delivery & Payment</a>
+              <a href="">Follow Us</a>
+            </div>
           </div>
         </div>
       </div>
@@ -49,7 +67,7 @@
   </header>
 
   <!-- Why Choose Us ? Section -->
-  <section class="py-12 bg-[#F9FBFE]">
+  <section class="py-12 bg-[#F9FBFE]" id="why-choose">
     <div class="max-w-[100%] mx-auto">
       <div class="w-[80%] mx-auto">
         <h1 class="text-[#183b56] text-[24px] md:text-[28px] font-bold leading-8 mb-2">
@@ -106,7 +124,7 @@
   </section>
 
   <!-- Explore Menu Section -->
-  <section class="py-12">
+  <section class="py-12" id="explore-menu">
     <div class="max-w-[100%] mx-auto">
       <div class="w-[80%] mx-auto">
         <h1 class="text-[28px] text-[#183B56] leading-8 font-bold mb-3">Explore Menu</h1>
@@ -244,7 +262,7 @@
   </section>
 
   <!-- Healthy food section -->
-  <section class="py-10 bg-[#FAFCFF]">
+  <section class="py-10 bg-[#FAFCFF]" id="health-sec">
     <div class="max-w-[100%] mx-auto">
       <div class="w-[80%] mx-auto grid grid-cols-1 md:grid-cols-12 ">
         <div class="col-span-5">
@@ -370,6 +388,8 @@
       </div>
     </div>
   </section>
+
+  <script src="../Food-store-Page/script.js"></script>
 </body>
 
 </html>
