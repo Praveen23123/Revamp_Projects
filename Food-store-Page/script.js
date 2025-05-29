@@ -11,5 +11,5 @@ menu.addEventListener("click", () => {
 cross.addEventListener("click", () => {
   cross.classList.toggle("hidden");
   menu.classList.toggle("hidden");
-  nav_list.classList.toggle("hidden");
+  nav_list.classList.toggle("block");
 });
