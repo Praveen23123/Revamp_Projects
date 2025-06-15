@@ -5,22 +5,8 @@ import "./index.css";
 import ProductLayout from "./components/ProductsLayout";
 import ProductCard from "./components/ProductCard";
 import ErrorPage from "./components/ErrorPage";
-
-const Header = () => {
-  return (
-    <>
-      <h1>Header Component</h1>
-    </>
-  );
-};
-
-const Footer = () => {
-  return (
-    <>
-      <h1>Footer Component</h1>
-    </>
-  );
-};
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
