@@ -1,35 +1,66 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import "./index.css";
+import ProductLayout from "./components/ProductsLayout";
+import ProductCard from "./components/ProductCard";
+import ErrorPage from "./components/ErrorPage";
+
+const Header = () => {
+  return (
+    <>
+      <h1>Header Component</h1>
+    </>
+  );
+};
+
+const Footer = () => {
+  return (
+    <>
+      <h1>Footer Component</h1>
+    </>
+  );
+};
 
 const App = () => {
   return (
     <>
-      <div>
-        <h1 className="bg-red-500 text-center">Hello Bois</h1>
-      </div>
-      <Card title={"welcome"} para={"Hello Everyone"} />
-      <Card title={"HI"} para={"sfsdsd"} />
-      <Card title={"guys"} para={"Hello Evdryone"} />
-      <Card title={"luffy"} para={"Hello svxvdfb zEveryone"} />
+      <ProductLayout />
     </>
   );
 };
 
-const Card = (props) => {
+const AppLayout = () => {
   return (
     <>
-      <div href="#" className="max-w-md border-[2px] rounded-lg h-[200px]">
-        <h5 className="text-xl font-bold tracking-tight text-gray-900 dark:text-white text-center">
-          {props.title}
-        </h5>
-        <p className="font-normal text-gray-700 dark:text-gray-400 text-center">
-          {props["para"]}
-        </p>
-      </div>
+      <Header />
+      <Outlet />
+      <Footer />
     </>
   );
 };
 
+const routes = createBrowserRouter([
+  {
+    path: "/",
+    element: <AppLayout />,
+    children: [
+      {
+        path: "/",
+        element: <App />,
+      },
+      {
+        path: "/products",
+        element: <ProductCard />,
+      },
+      {
+        path: "/products2",
+        element: <ProductLayout />,
+      },
+    ],
+    errorElement: <ErrorPage />,
+  },
+]);
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<App />);
+root.render(<RouterProvider router={routes} />);
