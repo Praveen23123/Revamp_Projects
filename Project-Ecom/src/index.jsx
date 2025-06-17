@@ -7,6 +7,9 @@ import ProductCard from "./components/ProductCard";
 import ErrorPage from "./components/ErrorPage";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import ProductOverview from "./components/ProductOverview";
+import Contact from "./components/Contact";
+import Features from "./components/Features";
 
 const App = () => {
   return (
@@ -40,8 +43,16 @@ const routes = createBrowserRouter([
         element: <ProductCard />,
       },
       {
-        path: "/products2",
-        element: <ProductLayout />,
+        path: "/features",
+        element: <Features />,
+      },
+      {
+        path: "/products/:product_id",
+        element: <ProductOverview />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
       },
     ],
     errorElement: <ErrorPage />,

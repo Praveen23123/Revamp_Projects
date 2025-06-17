@@ -23,7 +23,13 @@ const ProductLayout = () => {
   };
 
   if (loading) {
-    return <h1>Loading.........</h1>;
+    return (
+      <>
+        <div className="flex items-center justify-center min-h-screen">
+          <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-gray-900"></div>
+        </div>
+      </>
+    );
   } else {
     return (
       <>
@@ -34,6 +40,7 @@ const ProductLayout = () => {
                 return (
                   <>
                     <ProductCard
+                      product_id={items.id}
                       product_image={items.thumbnail}
                       product_title={items.title}
                       category={items.category}
