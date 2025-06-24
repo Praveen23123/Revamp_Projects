@@ -14,6 +14,12 @@ const ProductCard = ({
     <>
       <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
         <div className="h-56 w-full">
+          <button
+            type="button"
+            className="inline-flex items-center rounded-l-none rounded-full bg-primary-500 px-4 py-2 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4  focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 "
+          >
+            <p className="first-letter:uppercase">{category} Products</p>
+          </button>
           <a href="#">
             <img
               className="mx-auto h-full dark:hidden"
@@ -109,9 +115,6 @@ const ProductCard = ({
           >
             {product_title}
           </a>
-          <p className="text-md text-[#5d6470] first-letter:uppercase">
-            {category} Products
-          </p>
           <div className="mt-2 flex items-center gap-2">
             <div className="flex items-center">
               <svg

@@ -10,6 +10,7 @@ import Footer from "./components/Footer";
 import ProductOverview from "./components/ProductOverview";
 import Contact from "./components/Contact";
 import Features from "./components/Features";
+import ImageComponent from "./components/ImageComponent";
 
 const App = () => {
   return (
@@ -53,6 +54,10 @@ const routes = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact />,
+      },
+      {
+        path: "/image",
+        element: <ImageComponent />,
       },
     ],
     errorElement: <ErrorPage />,

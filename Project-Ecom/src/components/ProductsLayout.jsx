@@ -1,26 +1,8 @@
-import { useEffect, useState } from "react";
 import ProductCard from "../components/ProductCard";
+import useProductLayout from "../hooks/useProductLayout";
 
 const ProductLayout = () => {
-  const [productData, setProductData] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    fetchData();
-  }, []);
-
-  const fetchData = async () => {
-    try {
-      setLoading(true);
-      const response = await fetch("https://dummyjson.com/products");
-      const data = await response.json();
-      setProductData(data.products);
-    } catch (err) {
-      console.log(err);
-    } finally {
-      setLoading(false);
-    }
-  };
+  const { productData, loading } = useProductLayout();
 
   if (loading) {
     return (

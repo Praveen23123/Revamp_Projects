@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
+import useOfflineStatus from "../hooks/useOfflineStatus";
 
 const Header = () => {
+  const status = useOfflineStatus();
   return (
     <>
       <header>
@@ -16,6 +18,8 @@ const Header = () => {
                 ShopSpot
               </span>
             </Link>
+
+            <p>{status ? "🟢" : "🔴"}</p>
             <div className="flex items-center lg:order-2">
               <a
                 href="#"
